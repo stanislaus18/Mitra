@@ -1,0 +1,13 @@
+<div class="left-column">
+
+    <app-table #table (event)="event($event)"></app-table>
+
+</div>
+
+<div class="right-column">
+
+    <app-form #form *ngIf="showForm" [seldata]="seldata" (event)="event($event, data)"></app-form>
+
+    <app-details #details *ngIf="showDetails" [seldata]="seldata" (event)="event($event)"></app-details>
+
+</div>

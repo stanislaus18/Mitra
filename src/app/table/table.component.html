@@ -1,0 +1,18 @@
+<a #create class="btn btn-primary float-right" (click)="triggerevent(add)">Add Element</a>
+
+<table class="table table-hover">
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+    </tr>
+
+    <tr *ngFor="let el of elements" (click)="triggerevent(details, el)">
+        <td>
+            {{el.title}}
+        </td>
+        <td>
+            {{el.description}}
+        </td>
+    </tr>
+
+</table>
